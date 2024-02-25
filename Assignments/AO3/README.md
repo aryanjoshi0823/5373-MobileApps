@@ -1,4 +1,16 @@
-## Api Starter
+## AO3 -  Create your own server.
+
+## FILES
+
+
+
+|   #   | File             | Description                                        |
+| :---: | ---------------- | -------------------------------------------------- |
+|   1   | Main.cpp         | Main driver of my project that launches game.      |
+|   2   | HelperClass.cpp  | Helper class that holds movement functions         |
+|   3   | TextureClass.cpp | Helper class that assists with textures and images |
+
+## INSTRUCTION
 
 ### Upload Files
 
