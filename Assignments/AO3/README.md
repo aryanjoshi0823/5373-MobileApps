@@ -2,6 +2,7 @@
 ### Aryan Joshi
 ## Description:
 
+In this program, a DigitalOcean server is provisioned as the initial step. Following server setup, the focus shifts to learning the fundamentals of implementing a basic Python FastAPI. FastAPI, a high-performance web framework, is utilized for building APIs with Python, known for its simplicity and speed. Through this process, students gain insight into creating endpoints, handling requests and responses, and structuring a FastAPI project.  By combining practical server deployment with hands-on experience in FastAPI development, students acquire a comprehensive understanding of both cloud infrastructure management and modern web API design practices.
 
 ## Files
 
