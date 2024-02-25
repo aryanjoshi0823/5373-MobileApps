@@ -1,3 +1,18 @@
+└── 5373-MobileApps                  (main repo folder)
+    ├── Assignments                  (assignments folder)                   
+    │   ├── A03
+    │   │   ├── README.md            (AO3 folder readme)
+    │   │   ├── api.py
+    │   │   ├── people.json
+    │   │   └── requirements.txt
+    |   └── README.md               (assignments folder readme)
+    └── README.md                   (main repo readme)
+
+
+
+
+
+
 ##  Assignments
 
 |   #   | Folder Link                   | Assignment Description                                                             |
@@ -8,14 +23,5 @@
 
 
 
-└── 5373-MobileApps                  (main repo folder)
-    ├── Assignments                  (assignments folder)                   
-    │   ├── A03
-    │   │   ├── README.md            (AO3 folder readme)
-    │   │   ├── api.py
-    │   │   ├── people.json
-    │   │   └── requirements.txt
-    |   └── README.md               (assignments folder readme)
-    └── README.md                   (main repo readme)
 
 
