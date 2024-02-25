@@ -12,7 +12,7 @@
 |   3   | requirements.txt | list of package that need to install to run this program           |
 
 
-### INSTRUCTION
+## INSTRUCTION
 
 Upload your files to your server: 
 
@@ -21,7 +21,7 @@ rsync -avz -e ssh ./api_files root@12.34.56.78:/root/api
 # replace 12.34.56.78 with your ip address or domain name
 ```
 
-#### Command Break Down
+### Command Break Down
 
 - `rsync`: The command to start the rsync utility.
 - `-a`: This stands for "archive mode," which essentially preserves the file system permissions, timestamps, symbolic links, and other attributes.
@@ -48,7 +48,7 @@ Install the requirements.
 
 To set up a Python virtual environment (venv) on an Ubuntu server, you'll want to make sure you have Python and the `python3-venv` package installed. The `venv` module is part of the standard library in Python 3, but on Ubuntu, you might need to install it separately. Here's a step-by-step guide to get you sorted:
 
-#### Step 1: Install python3-venv
+### Step 1: Install python3-venv
 
 Once Python 3 is set up, you can install the `python3-venv` package, which includes the `venv` module, by running:
 
@@ -56,7 +56,7 @@ Once Python 3 is set up, you can install the `python3-venv` package, which inclu
 sudo apt install python3-venv
 ```
 
-#### Step 2: Create a Virtual Environment
+### Step 2: Create a Virtual Environment
 
 Now that you have all the necessary tools, choose a directory where you want to create your virtual environment. Then, run the following command to create a virtual environment. In this example, I'm naming the environment `myenv`, but you can name it whatever you prefer. I name mine `.venv`, but its just my preference. Some devs name the venv more inline with the project, like `apivenv`:
 
@@ -66,7 +66,7 @@ python3 -m venv myenv
 
 This command will create a `myenv` directory if it doesn't exist and set up a new virtual environment inside it.
 
-#### Step 3: Activate the Virtual Environment
+### Step 3: Activate the Virtual Environment
 
 To start using this virtual environment, you need to activate it. To do so, run:
 
@@ -76,7 +76,7 @@ source myenv/bin/activate
 
 Once activated, your terminal prompt will change to indicate that you're now working inside the `myenv` virtual environment. While activated, any Python or pip commands will use the versions in the virtual environment, not the global Python installation.
 
-#### Step 4: Install Requirements
+### Step 4: Install Requirements
 
 Install the requirements for the Fast Api code:
 
@@ -86,7 +86,7 @@ pip install -r requirements.txt
 
 This will install everything listed in the `requirements.txt` folder.
 
-#### Step 5: Run Api
+### Step 5: Run Api
 
 - Change the IP address at the bottom of api.py to your ip address.
 - Make sure 8080 is opened through the firewall.
@@ -95,7 +95,7 @@ This will install everything listed in the `requirements.txt` folder.
 Hopefully its running, go access it in a browser with: [http://your.ip.address:8083](http://your.ip.address:8083)
 
 
-#### Step 6: Deactivating the Virtual Environment
+### Step 6: Deactivating the Virtual Environment
 
 When you're done working in the virtual environment and want to return to your global Python environment, simply run:
 
