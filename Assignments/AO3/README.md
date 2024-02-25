@@ -1,16 +1,17 @@
 ## AO3 -  Create your own server.
+### Aryan Joshi
+### Description:
 
-## FILES
 
+### FILES
 
+|   #   | File             | Description                                                        |
+| :---: | ---------------- | -------------------------------------------------------------------|
+|   1   | api.py           | python script that run basics api implementation using fastapi     |
+|   2   | people.json      | contain dummy data in json format that is used in api.py           |
+|   3   | requirements.txt | list of package that need to install to run this program           |
 
-|   #   | File             | Description                                        |
-| :---: | ---------------- | -------------------------------------------------- |
-|   1   | Main.cpp         | Main driver of my project that launches game.      |
-|   2   | HelperClass.cpp  | Helper class that holds movement functions         |
-|   3   | TextureClass.cpp | Helper class that assists with textures and images |
-
-## INSTRUCTION
+### INSTRUCTION
 
 ### Upload Files
 
@@ -41,7 +42,7 @@ Using `rsync` in this way is super efficient and secure, especially with the `-z
 
 ### Dependencies
 
-Install the requirements. Remember I have been creating a virtual environment in each of my project folders. So, that is the method I will be showing. 
+Install the requirements. 
 
 
 ### Setup
@@ -92,7 +93,7 @@ This will install everything listed in the `requirements.txt` folder.
 - Make sure 8080 is opened through the firewall.
 - Run python api.py
 
-Hopefully its running, go access it in a browser with: [http://your.ip.address:8080](http://your.ip.address:8080)
+Hopefully its running, go access it in a browser with: [http://your.ip.address:8083](http://your.ip.address:8083)
 
 
 ### Step 6: Deactivating the Virtual Environment
