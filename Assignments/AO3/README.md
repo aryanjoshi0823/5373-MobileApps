@@ -1,5 +1,5 @@
 ## AO3 -  Create your own server.
-### Aryan Joshi
+## Aryan Joshi
 ### Description:
 
 
@@ -11,9 +11,9 @@
 |   2   | people.json      | contain dummy data in json format that is used in api.py           |
 |   3   | requirements.txt | list of package that need to install to run this program           |
 
-### INSTRUCTION
 
-### Upload Files
+### INSTRUCTION
+## Upload Files
 
 Upload your files to your server: 
 
