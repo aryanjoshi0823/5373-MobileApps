@@ -13,7 +13,6 @@
 
 
 ### INSTRUCTION
-## Upload Files
 
 Upload your files to your server: 
 
