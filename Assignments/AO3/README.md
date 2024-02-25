@@ -66,7 +66,7 @@ python3 -m venv myenv
 
 This command will create a `myenv` directory if it doesn't exist and set up a new virtual environment inside it.
 
-### Step 3: Activate the Virtual Environment
+#### Step 3: Activate the Virtual Environment
 
 To start using this virtual environment, you need to activate it. To do so, run:
 
@@ -76,7 +76,7 @@ source myenv/bin/activate
 
 Once activated, your terminal prompt will change to indicate that you're now working inside the `myenv` virtual environment. While activated, any Python or pip commands will use the versions in the virtual environment, not the global Python installation.
 
-### Step 4: Install Requirements
+#### Step 4: Install Requirements
 
 Install the requirements for the Fast Api code:
 
@@ -86,7 +86,7 @@ pip install -r requirements.txt
 
 This will install everything listed in the `requirements.txt` folder.
 
-### Step 5: Run Api
+#### Step 5: Run Api
 
 - Change the IP address at the bottom of api.py to your ip address.
 - Make sure 8080 is opened through the firewall.
@@ -95,7 +95,7 @@ This will install everything listed in the `requirements.txt` folder.
 Hopefully its running, go access it in a browser with: [http://your.ip.address:8083](http://your.ip.address:8083)
 
 
-### Step 6: Deactivating the Virtual Environment
+#### Step 6: Deactivating the Virtual Environment
 
 When you're done working in the virtual environment and want to return to your global Python environment, simply run:
 
