@@ -14,8 +14,7 @@
     │   │   ├── README.md            (AO3 folder readme)
     │   │   ├── api.py
     │   │   ├── people.json
-    │   │   └── requirements.txt
-    |   └── README.md               (assignments folder readme)
+    │   │   └── requirements.txt            
     |   |
     |   ├── A04
     |   |    ├── README.md            (AO4 folder readme)
@@ -25,7 +24,7 @@
     |   |    ├── loadmongo.py
     |   |    ├── mongoManager.py
     |   |    └── requirements.txt
-    |   └── README.txt
+    |   └── README.txt                 (assignments folder readme)
     |
     └── README.md                   (main repo readme)
 
