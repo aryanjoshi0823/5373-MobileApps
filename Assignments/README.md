@@ -17,15 +17,15 @@
     │   │   └── requirements.txt
     |   └── README.md               (assignments folder readme)
     |   |
-        ├── A04
-        |    ├── README.md            (AO4 folder readme)
-        |    ├── api.py
-        |    ├── fix_categories.py
-             ├── categoryjson
-        |     ├── loadmongo.py
-                ├── mongoManager.py
-
-        |    └── requirements.txt
+    |   ├── A04
+    |   |    ├── README.md            (AO4 folder readme)
+    |   |    ├── api.py
+    |   |    ├── fix_categories.py
+    |   |    ├── categoryjson
+    |   |    ├── loadmongo.py
+    |   |    ├── mongoManager.py
+    |   |    └── requirements.txt
+    |   └── README.txt
     |
     └── README.md                   (main repo readme)
 
