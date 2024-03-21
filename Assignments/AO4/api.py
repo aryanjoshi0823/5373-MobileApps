@@ -68,123 +68,85 @@ app = FastAPI(
     },
 )
 
-mm = MongoManager(db="candy_store")
+mongoManager = MongoManager(db="candy_store")
+
+
 
 @app.get("/")
-async def docs_redirect():
-    """Api's base route that displays the information created above in the ApiInfo section."""
-    return RedirectResponse(url="/docs")
-
-@app.get("/candies")
-def list_all_candies():
-    """
-    Retrieve a list of all candies available in the store.
-    """
-    mm.setCollection("candies")
-    result = mm.get(filter={"_id": 0})
+def getCandies():
+    mongoManager.setCollection("candies")
+    result = mongoManager.get(filter={"_id": 0})
     return result
 
 @app.get("/categories")
-def list_categories():
-    """
-    Get a list of candy categories (e.g., chocolates, gummies, hard candies).
-    """
-    mm.setCollection("candies")
-    categories = mm.distinct("category")
+def getCategories():
+    mongoManager.setCollection("candies")
+    categories = mongoManager.distinct("category")
     return categories
 
 @app.get("/candies/category/{category}")
-def candies_by_category(category: str):
-    """
-    Search for candies based on a specific category.
-    """
-    mm.setCollection("candies")
-    result = mm.get(
+def getCandiesByCategory(category: str):
+    mongoManager.setCollection("candies")
+    result = mongoManager.get(
         query={"category": category}, 
         filter={"_id": 0, "name": 1, "price": 1, "category": 1},
     )
     return result
 
 @app.get("/candies/description")
-def candies_by_description(keyword: str = Query(None, min_length=3)):
-    """
-    Search for candies based on a keyword in their description.
-    """
-    mm.setCollection("candies")
-    result = mm.get(
+def getCandiesByDescription(keyword: str = Query(None, min_length=3)):
+    mongoManager.setCollection("candies")
+    result = mongoManager.get(
         query={"description": {"$regex": keyword, "$options": "i"}},
         filter={"_id": 0, "name": 1, "price": 1, "category": 1},
     )
     return result
 
 @app.get("/candies/name")
-def candies_by_name(keyword: str = Query(None, min_length=3)):
-    """
-    Search for candies based on a keyword in their name.
-    """
-    mm.setCollection("candies")
-    result = mm.get(
+def getCandiesByName(keyword: str = Query(None, min_length=3)):
+    mongoManager.setCollection("candies")
+    result = mongoManager.get(
         query={"name": {"$regex": keyword, "$options": "i"}},
         filter={"_id": 0, "name": 1, "price": 1, "category": 1},
     )
     return result
 
-@app.get("/candies/price-range")
-def candies_by_price_range(min_price: float = Query(None, ge=0), max_price: float = Query(None, ge=0)):
-    """
-    Get candies within a specified price range.
-    """
-    mm.setCollection("candies")
-    result = mm.get(
+@app.get("/candies/priceRange")
+def getCandiesByPriceRng(min_price: float = Query(None, ge=0), max_price: float = Query(None, ge=0)):
+    mongoManager.setCollection("candies")
+    result = mongoManager.get(
         query={"price": {"$gte": min_price, "$lte": max_price}},
         filter={"_id": 0, "name": 1, "price": 1, "category": 1},
     )
     return result
 
 @app.get("/candies/id/{id}")
-def get_candy_by_id(id: str):
-    """
-    Get detailed information about a specific candy by its ID.
-    """
-    mm.setCollection("candies")
-    result = mm.get(
+def getCandyById(id: str):
+    mongoManager.setCollection("candies")
+    result = mongoManager.get(
         query={"id": id}, filter={"_id": 0, "name": 1, "price": 1, "category": 1}
     )
     return result
 
-@app.put("/candies/{candy_id}/update-price")
-def update_candy_price(candy_id: str, new_price: float):
-    """
-    Update the price of a specific candy.
-    """
-    mm.setCollection("candies")
-    mm.update(query={"id": candy_id}, update={"$set": {"price": new_price}})
+@app.put("/candies/{candy_id}/updatePrice")
+def putUpdateCandyPrice(candy_id: str, new_price: float):
+    mongoManager.setCollection("candies")
+    mongoManager.update(query={"id": candy_id}, update={"$set": {"price": new_price}})
     return {"message": "Candy price updated successfully"}
 
-@app.put("/candies/{candy_id}/update-details")
-def update_candy_details(candy_id: str, updated_details: dict):
-    """
-    Update various details of a specific candy.
-    """
-    mm.setCollection("candies")
-    mm.update(query={"id": candy_id}, update={"$set": updated_details})
+@app.put("/candies/{candy_id}/updateDetails")
+def putUpdateCandyDetails(candy_id: str, updated_details: dict):
+    mongoManager.setCollection("candies")
+    mongoManager.update(query={"id": candy_id}, update={"$set": updated_details})
     return {"message": "Candy details updated successfully"}
 
 @app.delete("/candies/{candy_id}")
-def delete_candy(candy_id: str):
-    """
-    Remove a candy from the store's inventory.
-    """
-    mm.setCollection("candies")
-    mm.delete(query={"id": candy_id})
+def deleteCandy(candy_id: str):
+    mongoManager.setCollection("candies")
+    mongoManager.delete(query={"id": candy_id})
     return {"message": "Candy deleted successfully"}
 
 if __name__ == "__main__":
-    uvicorn.run(
-        "api:app", host="localhost", port=8084, log_level="debug", reload=True
-    )
-"""                                   ^
-                                      |
-CHANGE DOMAIN NAME                    |              
+    uvicorn.run("api:app", host="143.244.178.214", port=8084, log_level="debug", reload=True)
+    
 
-"""
