@@ -1,1 +1,6 @@
-vsdvsd
+|   #   | Name                                   | Description                                                                         |
+| :---: | :--------------------------------------| :-----------------------------------------------------------------------------------|
+|   1   | [Backend](./Backend/)                  | A python and fastapi project that contain api for registration, login, searching candies, uploading picture, and location                     |
+|   2   | [UI](./UI/)                            | React native code to interact with live api for registration and searching candies  |
+
+
