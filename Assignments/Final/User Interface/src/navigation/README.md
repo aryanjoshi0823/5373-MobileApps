@@ -1,3 +1,5 @@
+##navigation
+
 |   #   | Name                                             | Description                                                            |
 | :---: | :----------------------------------------------- | :--------------------------------------------------------------------- |
 |   1   | [BottomTabNavigator](./BottomTabNavigator.jsx)   | Main Navigation included in App.js that include all the navigation of the application like Home, Chat, Location, ImageUpload|
