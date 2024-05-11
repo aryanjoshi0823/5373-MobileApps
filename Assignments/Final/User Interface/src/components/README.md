@@ -1,3 +1,5 @@
+## Components
+
 |   #   | Name                                         | Description                                                            |
 | :---: | :------------------------------------------- | :--------------------------------------------------------------------- |
 |   1   | [CameraPage](./CameraPage.jsx)               | Open camera for photo upload                                           |
